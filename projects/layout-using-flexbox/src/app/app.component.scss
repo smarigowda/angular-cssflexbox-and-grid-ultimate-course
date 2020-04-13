@@ -143,9 +143,11 @@ footer {
   height: 100px;
   background-color: #8E24AA;
   margin-top: 20px;
-
-}
-
-footer p {
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & p {
+    color: white;
+    font-size: 1,4rem;
+  }
 }
