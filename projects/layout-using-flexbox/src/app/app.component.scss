@@ -75,9 +75,18 @@ h2 {
   }
 }
 
-.main-content {}
-
 aside {
+  & ul {
+    list-style-type: none;
+    & li {
+      & a {
+        color: white;
+        text-decoration: none;
+        font-family: 'IBM Plex Serif', serif;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
 
 aside {
@@ -92,6 +101,7 @@ aside {
   aside {
     flex: 0 0 40%;
     order: 1;
+    margin-bottom: 2rem;
   }
 }
 
@@ -99,6 +109,7 @@ aside {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .services .service {
@@ -106,6 +117,9 @@ aside {
 }
 
 @media screen and (min-width:768px) {
+  .services {
+    margin-bottom: 0;
+  }
   .services .service {
     flex: 0 0 calc(33.33% - 1rem);
   }
