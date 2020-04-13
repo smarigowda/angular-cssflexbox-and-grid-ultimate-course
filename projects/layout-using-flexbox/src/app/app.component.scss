@@ -86,11 +86,11 @@ aside {
 
 @media screen and (min-width:768px) {
   .main-content {
-
+    flex: 0 0 60%;
   }
 
   aside {
-
+    flex: 0 0 40%;
   }
 }
 
