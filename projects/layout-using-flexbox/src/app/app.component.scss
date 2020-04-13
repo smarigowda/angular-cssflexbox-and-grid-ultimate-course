@@ -63,22 +63,21 @@ h2 {
 
 .flex-container {
   margin-top: 20px;
-  /* Flex here*/
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width:768px) {
   .flex-container {
-    /* Flex here*/
+    flex-direction: row;
   }
 }
 
 .main-content {
-  /* Flex here*/
-
 }
 
 aside {
-  /* flex here*/
+
 }
 
 aside {
@@ -87,25 +86,25 @@ aside {
 
 @media screen and (min-width:768px) {
   .main-content {
-    /* Flex here*/
+
   }
 
   aside {
-    /* Flex here*/
+
   }
 }
 
 .services {
-  /* Flex here*/
+
 }
 
 .services .service {
-  /* Flex here*/
+
 }
 
 @media screen and (min-width:768px) {
   .services .service {
-    /* Flex here*/
+
   }
 }
 
@@ -127,7 +126,7 @@ footer {
   height: 100px;
   background-color: #8E24AA;
   margin-top: 20px;
-  /* Flex here*/
+
 }
 
 footer p {
