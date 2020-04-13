@@ -15,6 +15,12 @@ body {
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width:768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   & h1 {
     color: white;
   }
@@ -58,19 +64,49 @@ h2 {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-}
 
-aside {
-  background-color: #03A9F4;
+  @media screen and (min-width:768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-  & ul {
-    list-style-type: none;
+  & .main-content {
+    @media screen and (min-width:768px) {
+      flex: 0 0 calc(60% - 1rem);
+    }
+  }
 
-    & li a {
-      color: white;
-      text-decoration: none;
-      font-family: 'IBM Plex Serif', serif;
-      font-size: 1.2rem;
+  & aside {
+    background-color: #03A9F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width:768px) {
+      flex: 0 0 40%;
+      order: 1;
+      margin-bottom: 2rem;
+    }
+
+    & ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      & li {
+        margin-bottom: 1rem;
+
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+
+        & a {
+          color: white;
+          text-decoration: none;
+          font-family: 'IBM Plex Serif', serif;
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }
@@ -81,9 +117,17 @@ aside {
   justify-content: space-between;
   margin-bottom: 2rem;
 
+  @media screen and (min-width:768px) {
+    margin-bottom: 0;
+  }
+
   & .service {
     flex: 0 0 100%;
     padding: 5px;
+
+    @media screen and (min-width:768px) {
+      flex: 0 0 calc(33.33% - 1rem);
+    }
 
     &:nth-child(1) {
       background-color: #E53935;
@@ -96,43 +140,6 @@ aside {
     &:nth-child(3) {
       background-color: #3F51B5;
     }
-  }
-}
-
-@media screen and (min-width:768px) {
-  .flex-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .services {
-    margin-bottom: 0;
-
-    & .service {
-      flex: 0 0 calc(33.33% - 1rem);
-    }
-  }
-}
-
-@media screen and (min-width:768px) {
-  .main-content {
-    flex: 0 0 calc(60% - 1rem);
-  }
-
-  aside {
-    flex: 0 0 40%;
-    order: 1;
-    margin-bottom: 2rem;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .site-name {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 
