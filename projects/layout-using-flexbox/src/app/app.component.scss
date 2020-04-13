@@ -70,6 +70,7 @@ h2 {
 @media screen and (min-width:768px) {
   .flex-container {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -86,7 +87,7 @@ aside {
 
 @media screen and (min-width:768px) {
   .main-content {
-    flex: 0 0 60%;
+    flex: 0 0 calc(60% - 1rem);
   }
 
   aside {
