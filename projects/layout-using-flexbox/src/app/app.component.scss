@@ -38,8 +38,9 @@ nav a {
   font-family: 'IBM Plex Serif', serif;
   text-decoration: none;
   margin-right: 1rem;
+
   &:last-of-type {
-      margin-right: 0;
+    margin-right: 0;
   }
 }
 
@@ -74,11 +75,9 @@ h2 {
   }
 }
 
-.main-content {
-}
+.main-content {}
 
 aside {
-
 }
 
 aside {
@@ -92,20 +91,23 @@ aside {
 
   aside {
     flex: 0 0 40%;
+    order: 1;
   }
 }
 
 .services {
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .services .service {
-
+  flex: 0 0 100%;
 }
 
 @media screen and (min-width:768px) {
   .services .service {
-
+    flex: 0 0 calc(33.33% - 1rem);
   }
 }
 
