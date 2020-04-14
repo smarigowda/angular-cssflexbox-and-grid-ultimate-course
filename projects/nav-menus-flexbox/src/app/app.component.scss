@@ -103,3 +103,68 @@ nav {
   }
 
 }
+
+.dropdown {
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      ul {
+        margin-top: 1rem;
+        display: none;
+
+        li:hover {
+          background-color: #ff5e62;
+        }
+      }
+
+      &:hover ul {
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (min-width:768px) {
+    ul {
+      flex-direction: row;
+      justify-content: space-between;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 0 1 100%;
+
+        ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+
+          li {
+            &:hover {
+              background-color: white;
+
+              a {
+                color: #ff5e62;
+              }
+            }
+          }
+
+        }
+
+        &:hover ul {
+          display: flex;
+          flex-wrap: wrap;
+          background-color: #ff5e62;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
