@@ -84,6 +84,54 @@
   }
 }
 
+form {
+  background-color: var(--gray);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  @media (min-width:768px) {
+    max-width: 800px;
+    margin: 0 auto;
+
+    & .form-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      & .field {
+        flex: 0 0 calc(50% - 1rem);
+      }
+
+      & .w-100 {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+  & .field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    & label {
+      flex: 0 0 90px;
+    }
+
+    & input[type="text"],
+    input[type="tel"],
+    input[type="mail"],
+    textarea {
+      flex: 1;
+      height: 2.4rem;
+    }
+  }
+
+  & .submit-form {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .icons {
   height: 100px;
   width: 100px;
