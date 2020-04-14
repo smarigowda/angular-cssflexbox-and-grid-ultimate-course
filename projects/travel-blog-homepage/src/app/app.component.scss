@@ -5,6 +5,7 @@
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 .hero {
@@ -107,6 +108,31 @@ img {
       text-transform: uppercase;
       display: inline-block;
       margin-top: 1rem;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width:480px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .entry {
+      flex: 0 0 calc(50% - 1rem);
+    }
+
+    h2 {
+      flex: 0 0 100%;
+    }
+  }
+
+  @media screen and (min-width:768px) {
+    .entry {
+      flex: 0 0 calc(33.33% - 1rem);
     }
   }
 }
