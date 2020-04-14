@@ -31,13 +31,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   & .hero-content {
       text-align: center;
       color: var(--white);
+      z-index: 1;
       & i {
           font-size: 3rem;
           color: var(--primary);
       }
+  }
+  &:after {
+      content: '';
+      background-color: rgb(0,0,0,.7);
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
   }
 }
 
