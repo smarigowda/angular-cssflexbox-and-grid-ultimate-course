@@ -104,6 +104,7 @@ nav {
 
 }
 
+// Multi Level Menu
 .dropdown {
   ul {
     display: flex;
@@ -113,6 +114,7 @@ nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      text-align: center;
 
       ul {
         margin-top: 1rem;
@@ -216,5 +218,37 @@ nav {
         }
       }
     }
+  }
+}
+
+// Dropdown & Social Menu
+.navegacion-social-dropdown {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  nav {
+    flex: 0 0 100%;
+  }
+
+  .social-menu {
+    order: -1;
+  }
+
+  @media (min-width:768px) {
+    nav {
+      flex: 0 0 auto;
+
+      &.dropdown {
+        flex: 0 0 70%;
+      }
+
+      &.social-menu {
+        order: unset;
+        flex: 0 0 30%;
+      }
+    }
+
+
   }
 }
