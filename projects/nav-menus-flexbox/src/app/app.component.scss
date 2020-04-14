@@ -56,3 +56,50 @@ nav {
     }
   }
 }
+
+// Menu with icons
+.icons {
+  ul {
+    li {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+          font-size: 2rem;
+          margin-right: 1rem;
+          // flex: 0 0 3rem;
+          // do not use the above to set flex basis
+          // we can not center align the icon.
+        }
+
+        .text {
+          font-size: 1.4rem;
+
+          span {
+            display: block;
+            font-size: .8rem;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width:480px) {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        flex: 0 0 calc(50% - 2rem);
+      }
+    }
+
+    @media screen and (min-width:768px) {
+      li {
+        flex: 1;
+      }
+    }
+  }
+
+}
