@@ -64,4 +64,20 @@ img {
       }
     }
   }
+
+  .header-text {
+    h1 {
+      @media (min-width: 768px) {
+        display: block;
+        color: #008fd1;
+        text-transform: uppercase;
+        font-size: 3rem;
+        max-width: 40rem;
+        margin: 0;
+      }
+
+      display: none;
+    }
+
+  }
 }
