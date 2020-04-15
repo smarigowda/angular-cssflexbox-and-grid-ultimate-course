@@ -11,3 +11,13 @@
         }
     }
 }
+
+.login-form {
+    @include tablet {
+        background-color: rgba(0,0,0,.75);
+        max-width: 450px;
+        margin: 3rem auto 4rem auto;
+        padding: 2rem 4rem;
+        border-radius: 10px;
+    }
+}
