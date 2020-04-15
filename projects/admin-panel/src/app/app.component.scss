@@ -8,22 +8,44 @@
     background-color: $secondary;
     flex: 0 0 5rem;
     padding-left: 1rem;
+
     h1 {
-        color: $white;
+      color: $white;
     }
+
     @include desktop {
       flex: 0 0 20rem;
     }
+
     .desktop {
-        display: none;
-        @include desktop {
-            display: block;
-        }
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
     }
+
     .mobile {
-        @include desktop {
-            display: none;
-        }
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  .bar {
+    background-color: $primary;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+
+    .left-content {
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      color: $white;
+      .fa-arrow-right {
+          display: none;
+      }
     }
   }
 }
