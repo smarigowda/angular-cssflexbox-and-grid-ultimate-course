@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./scss/variables";
+@import "./scss/mixins";
+
+html {
+    @include box-sizing(border-box);
+}
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+.alert {
+    color: #e87c03;
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: .8rem;
+}
+body {
+  background-color: $black;
+  color: $gray2;
+  font-family: $main_font ;
+
+//   @include tablet {
+//     @include bg-image('bg.jpg');
+//   }
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  color: $gray2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
