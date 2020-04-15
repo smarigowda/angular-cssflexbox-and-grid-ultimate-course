@@ -1,6 +1,11 @@
 @import "../scss/variables";
 @import "../scss/mixins";
 
+i {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+}
+
 .header {
   display: flex;
 
@@ -43,8 +48,37 @@
       display: flex;
       align-items: center;
       color: $white;
+
       .fa-arrow-right {
-          display: none;
+        display: none;
+      }
+    }
+
+    .right-content {
+      display: flex;
+
+      .box {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: $secondary;
+        }
+
+        a {
+          color: $white;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+
+          span {
+            background-color: $tertiary;
+            padding: .5rem;
+            margin-left: .5rem;
+            border-radius: 50%;
+          }
+        }
       }
     }
   }
