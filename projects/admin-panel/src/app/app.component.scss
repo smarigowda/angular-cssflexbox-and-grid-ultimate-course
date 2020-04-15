@@ -1,0 +1,29 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+.header {
+  display: flex;
+
+  .site-name {
+    background-color: $secondary;
+    flex: 0 0 5rem;
+    padding-left: 1rem;
+    h1 {
+        color: $white;
+    }
+    @include desktop {
+      flex: 0 0 20rem;
+    }
+    .desktop {
+        display: none;
+        @include desktop {
+            display: block;
+        }
+    }
+    .mobile {
+        @include desktop {
+            display: none;
+        }
+    }
+  }
+}
