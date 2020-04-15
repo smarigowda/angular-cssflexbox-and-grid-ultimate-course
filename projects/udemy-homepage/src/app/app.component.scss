@@ -1,2 +1,25 @@
 @import "../sass/variables";
 @import "../sass/mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.cart-content {
+  position: relative;
+
+  &:hover .content {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 400px;
+    background-color: $white;
+    padding: 1rem;
+    .button {
+      @include button($secondary);
+    }
+  }
+}
