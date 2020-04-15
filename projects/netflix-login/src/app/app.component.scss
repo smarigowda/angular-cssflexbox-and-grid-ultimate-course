@@ -2,22 +2,86 @@
 @import "../scss/mixins";
 
 .site-header {
-    img {
-        margin-top: .5rem;
-        max-width: 100px;
-        @include tablet {
-            max-width: 180px;
-            margin-left: 2rem;
-        }
+  img {
+    margin-top: .5rem;
+    max-width: 100px;
+
+    @include tablet {
+      max-width: 180px;
+      margin-left: 2rem;
     }
+  }
 }
 
 .login-form {
-    @include tablet {
-        background-color: rgba(0,0,0,.75);
-        max-width: 450px;
-        margin: 3rem auto 4rem auto;
-        padding: 2rem 4rem;
-        border-radius: 10px;
+  @include tablet {
+    background-color: rgba(0, 0, 0, .75);
+    max-width: 450px;
+    margin: 3rem auto 4rem auto;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+  }
+
+  form {
+    legend {
+      color: $white;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 2rem 0;
     }
+
+    .field {
+      display: flex;
+      margin-bottom: .8rem;
+      position: relative;
+
+      label {
+        position: absolute;
+        top: 1.3rem;
+        left: 1rem;
+        font-size: .9rem;
+        z-index: 1;
+        color: white;
+        transition: font-size .2s ease, top .2s ease;
+      }
+
+      input {
+        color: trasparent;
+        padding: 1.3rem 1rem .9rem 1rem;
+        background-color: $gray;
+        border: none;
+        border-radius: 5px;
+        color: $white;
+        font-size: 1.2rem;
+        flex: 1;
+
+        &:focus {
+          background-color: $gray3;
+
+          +label {
+            font-size: .6rem;
+            top: .5rem;
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        text-transform: uppercase;
+        right: 1rem;
+        top: 1.2rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        color: white;
+      }
+
+    }
+
+    input[type="submit"] {
+        @include button($primary);
+    }
+  }
 }
