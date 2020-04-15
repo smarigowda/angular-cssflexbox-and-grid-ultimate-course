@@ -81,7 +81,38 @@
     }
 
     input[type="submit"] {
-        @include button($primary);
+      @include button($primary);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      padding: .5rem 0;
+      margin-bottom: 6rem;
+
+      a,
+      label {
+        font-size: .8rem;
+        color: white;
+      }
+    }
+  }
+  .bottom-content {
+    padding-bottom: 2rem;
+    @include tablet {
+        padding-top: 6rem;
+    }
+    a {
+        display: flex;
+        font-size: .8rem;
+    }
+    .new-user {
+        font-size: 1rem;
+        margin-top: 1rem;
+        span {
+            color: $white;
+            margin-left: .5rem;
+        }
     }
   }
 }
