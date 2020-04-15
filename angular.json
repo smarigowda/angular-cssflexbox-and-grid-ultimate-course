@@ -860,6 +860,149 @@
           }
         }
       }
+    },
+    "netflix-login": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/netflix-login",
+      "sourceRoot": "projects/netflix-login/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/netflix-login",
+            "index": "projects/netflix-login/src/index.html",
+            "main": "projects/netflix-login/src/main.ts",
+            "polyfills": "projects/netflix-login/src/polyfills.ts",
+            "tsConfig": "projects/netflix-login/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/netflix-login/src/favicon.ico",
+              "projects/netflix-login/src/assets"
+            ],
+            "styles": [
+              "projects/netflix-login/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/netflix-login/src/environments/environment.ts",
+                  "with": "projects/netflix-login/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "netflix-login:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "netflix-login:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "netflix-login:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/netflix-login/src/test.ts",
+            "polyfills": "projects/netflix-login/src/polyfills.ts",
+            "tsConfig": "projects/netflix-login/tsconfig.spec.json",
+            "karmaConfig": "projects/netflix-login/karma.conf.js",
+            "assets": [
+              "projects/netflix-login/src/favicon.ico",
+              "projects/netflix-login/src/assets"
+            ],
+            "styles": [
+              "projects/netflix-login/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/netflix-login/tsconfig.app.json",
+              "projects/netflix-login/tsconfig.spec.json",
+              "projects/netflix-login/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/netflix-login/e2e/protractor.conf.js",
+            "devServerTarget": "netflix-login:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "netflix-login:serve:production"
+            }
+          }
+        }
+      }
     }},
   "cli": {
     "analytics": "ad02cc31-67e9-4a0f-9d92-00553474cd8e"
