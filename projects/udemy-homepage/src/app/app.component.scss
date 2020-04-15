@@ -1,6 +1,10 @@
 @import "../sass/variables";
 @import "../sass/mixins";
 
+img {
+  display: block;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -78,24 +82,81 @@
   background: $secondary;
   color: white;
   @include gradient($secondary, $alternative);
+
   .icons {
     display: flex;
     flex-direction: column;
     padding: 1.4rem 0;
+
     @include desktop {
       flex-direction: row;
+
       .icon {
         flex: 0 0 33.33%;
       }
     }
+
     .icon1 {
       @include bg-icon(icon1)
     }
+
     .icon2 {
       @include bg-icon(icon2)
     }
+
     .icon3 {
       @include bg-icon(icon3)
+    }
+  }
+}
+
+.course-list {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .course {
+    flex: 0 0 calc(50% - 1rem);
+
+    @include tablet {
+      flex: 0 0 calc(33.33% - 1rem);
+    }
+
+    @include desktop {
+      flex: 0 0 calc(25% - 1rem);
+    }
+
+    background-color: $white;
+    margin-bottom: 1rem;
+    border: 1px solid darken($gray, 5%);
+
+    .course-info {
+      padding: 1rem;
+
+      h4 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .regular {
+          text-decoration: line-through;
+        }
+
+        .offer {
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+
+      .button {
+        @include button($primary);
+      }
     }
   }
 }
