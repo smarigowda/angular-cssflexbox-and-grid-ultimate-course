@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GridBasicComponent } from './grid-basic/grid-basic.component';
+import { GridTemplateAreaComponent } from './grid-template-area/grid-template-area.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GridBasicComponent
+    GridBasicComponent,
+    GridTemplateAreaComponent
   ],
   imports: [
     BrowserModule,
