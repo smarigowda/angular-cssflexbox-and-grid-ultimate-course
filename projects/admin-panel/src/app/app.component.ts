@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'admin-panel';
+  showLeftArrow = true;
+  showRightArrow = false;
+  leftContentClickHandler() {
+    console.log('left content div clicked...');
+    this.showLeftArrow = !this.showLeftArrow;
+    this.showRightArrow = !this.showRightArrow;
+  }
 }

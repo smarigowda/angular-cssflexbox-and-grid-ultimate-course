@@ -49,9 +49,15 @@ i {
       align-items: center;
       color: $white;
 
-      .fa-arrow-right {
-        display: none;
+      &:hover {
+        color: $alternative;
+        cursor: pointer;
       }
+
+      // This is handled using JS
+      //   .fa-arrow-right {
+      //     display: none;
+      //   }
     }
 
     .right-content {
@@ -241,8 +247,9 @@ i {
     &.submit {
       display: flex;
       justify-content: flex-end;
+
       .button {
-          @include button($primary);
+        @include button($primary);
       }
     }
   }
