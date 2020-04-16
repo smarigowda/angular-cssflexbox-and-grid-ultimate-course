@@ -4,10 +4,15 @@
 
 h2 {
   margin: 0;
+  font-size: 3rem;
 }
 
 .services {
   border: 3px solid black;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 50% 50%;
 }
 
 .service {
@@ -17,17 +22,24 @@ h2 {
 
 .service-1 {
   background-color: darkviolet;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .service-2 {
   background-color: limegreen;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .service-3 {
   background-color: teal;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-.services {
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-}
+.services {}
