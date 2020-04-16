@@ -11,8 +11,13 @@ h2 {
   border: 3px solid black;
   height: 300px;
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  grid-template-rows: 50% 50%;
+  //   grid-template-columns: 33.33% 33.33% 33.33%;
+  //   grid-template-rows: 50% 50%;
+  //   grid: 50% 50% / 33.33% 33.33% 33.33%;
+//   grid: 50% 50% / 50% 25% 25%;
+  grid: 75% 25% / 50% 25% 25%;
+
+
 }
 
 .service {
@@ -41,5 +46,3 @@ h2 {
   grid-column-start: 1;
   grid-column-end: 3;
 }
-
-.services {}
