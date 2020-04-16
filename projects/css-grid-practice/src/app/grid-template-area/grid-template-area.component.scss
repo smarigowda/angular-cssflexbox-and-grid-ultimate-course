@@ -13,10 +13,10 @@ img {
 
   display: grid;
   grid: 100px auto 100px / repeat(4, 1fr);
-  grid-template-areas: 
-  "header header header header"
-  "main main main aside"
-  "footer footer footer footer";
+  grid-template-areas:
+    "header header header header"
+    "main main main aside"
+    "footer footer footer footer";
   grid-gap: 1rem;
 }
 
@@ -45,13 +45,27 @@ img {
 .media-container {
   margin: 0 auto;
   max-width: 800px;
+  display: grid;
+  grid-template-areas:
+    "title title title title"
+    "image desc desc desc";
+
 }
 
-.site-title {}
+.site-title {
+  grid-area: title;
+  text-align: center;
+}
 
 .tagline {}
 
-.image {}
+.image {
+  grid-area: image;
+}
+
+.description {
+  grid-area: desc;
+}
 
 .info {}
 
