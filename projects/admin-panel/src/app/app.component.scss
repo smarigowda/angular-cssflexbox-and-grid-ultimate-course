@@ -211,14 +211,39 @@ i {
       flex: 0 0 120px;
       padding-left: 1rem;
     }
+
     input[type="text"],
     textarea {
-        flex: 1;
-        border: none;
-        padding: .5rem 1rem;
+      flex: 1;
+      border: none;
+      padding: .5rem 1rem;
     }
+
     textarea {
-        height: 10rem;
+      height: 10rem;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      align-items: center;
+
+      @include tablet {
+        flex: 0 0 40%;
+      }
+
+      label {
+        padding-left: .5rem;
+      }
+    }
+
+    &.submit {
+      display: flex;
+      justify-content: flex-end;
+      .button {
+          @include button($primary);
+      }
     }
   }
 
