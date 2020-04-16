@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+
+  .comment-container {
+    display: flex;
+    align-items: flex-start;
+
+    .avatar {
+      margin-right: 1rem;
+      width: 15rem;
+      border-radius: 5px;
+    }
+
+    .second-level {
+      background-color: #e1e1e1;
+      padding: 1rem;
+    }
+  }
+}
