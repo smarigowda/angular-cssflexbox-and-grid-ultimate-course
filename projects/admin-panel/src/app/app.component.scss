@@ -48,10 +48,15 @@ i {
       display: flex;
       align-items: center;
       color: $white;
+      transition: color 1s ease;
 
       &:hover {
         color: $alternative;
         cursor: pointer;
+      }
+
+      [hidden] {
+        display: none !important;
       }
 
       // This is handled using JS
