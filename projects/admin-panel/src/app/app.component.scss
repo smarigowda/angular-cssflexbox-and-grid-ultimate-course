@@ -6,6 +6,10 @@ i {
   font-size: 1.2rem;
 }
 
+.hide-sidebar {
+  margin-left: -20rem;
+}
+
 .header {
   display: flex;
 
@@ -103,6 +107,7 @@ i {
     background-color: $darkGray;
     color: $white;
     padding: 1rem 2rem 0 2rem;
+    transition: all .5s ease-out;
 
     .user {
       display: flex;

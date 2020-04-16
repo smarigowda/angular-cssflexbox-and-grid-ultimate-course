@@ -6,8 +6,8 @@
     </div>
     <div class="bar">
       <div class="left-content" (click)="leftContentClickHandler()">
-          <i class="fas fa-arrow-left" [hidden]="!showLeftArrow"></i>
-          <i class="fas fa-arrow-right" [hidden]="!showRightArrow"></i>
+        <i class="fas fa-arrow-left" [hidden]="!showLeftArrow"></i>
+        <i class="fas fa-arrow-right" [hidden]="!showRightArrow"></i>
       </div>
       <div class="right-content">
         <div class="messages box">
@@ -31,7 +31,7 @@
     </div>
   </header>
   <main class="main-content">
-    <aside class="sidebar">
+    <aside class="sidebar" [ngClass]="{ 'hide-sidebar' : showLeftArrow === false}">
       <div class="user">
         <img src="assets/img/user.svg">
         <p>Welcome: <span>Admin</span></p>
