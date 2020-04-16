@@ -1146,6 +1146,149 @@
           }
         }
       }
+    },
+    "flex-layouts": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/flex-layouts",
+      "sourceRoot": "projects/flex-layouts/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/flex-layouts",
+            "index": "projects/flex-layouts/src/index.html",
+            "main": "projects/flex-layouts/src/main.ts",
+            "polyfills": "projects/flex-layouts/src/polyfills.ts",
+            "tsConfig": "projects/flex-layouts/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/flex-layouts/src/favicon.ico",
+              "projects/flex-layouts/src/assets"
+            ],
+            "styles": [
+              "projects/flex-layouts/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/flex-layouts/src/environments/environment.ts",
+                  "with": "projects/flex-layouts/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "flex-layouts:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "flex-layouts:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "flex-layouts:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/flex-layouts/src/test.ts",
+            "polyfills": "projects/flex-layouts/src/polyfills.ts",
+            "tsConfig": "projects/flex-layouts/tsconfig.spec.json",
+            "karmaConfig": "projects/flex-layouts/karma.conf.js",
+            "assets": [
+              "projects/flex-layouts/src/favicon.ico",
+              "projects/flex-layouts/src/assets"
+            ],
+            "styles": [
+              "projects/flex-layouts/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/flex-layouts/tsconfig.app.json",
+              "projects/flex-layouts/tsconfig.spec.json",
+              "projects/flex-layouts/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/flex-layouts/e2e/protractor.conf.js",
+            "devServerTarget": "flex-layouts:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "flex-layouts:serve:production"
+            }
+          }
+        }
+      }
     }},
   "cli": {
     "analytics": "ad02cc31-67e9-4a0f-9d92-00553474cd8e"
