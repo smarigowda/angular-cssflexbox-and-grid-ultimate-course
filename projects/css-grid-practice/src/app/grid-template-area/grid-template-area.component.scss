@@ -46,27 +46,43 @@ img {
   margin: 0 auto;
   max-width: 800px;
   display: grid;
+  grid-gap: 1rem;
   grid-template-areas:
-    "title title title title"
-    "image desc desc desc";
+    "title"
+    "tagline"
+    "info"
+    "image"
+    "entry";
 
+  @media (min-width: 480px) {
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-areas:
+      "title title"
+      "image tagline"
+      "image info"
+      "entry entry";
+  }
 }
 
 .site-title {
   grid-area: title;
-  text-align: center;
 }
 
-.tagline {}
+.tagline {
+  grid-area: tagline;
+}
 
 .image {
   grid-area: image;
 }
 
-.description {
-  grid-area: desc;
+.description {}
+
+.info {
+  grid-area: info;
 }
 
-.info {}
-
-.entry {}
+.entry {
+  grid-area: entry;
+}
