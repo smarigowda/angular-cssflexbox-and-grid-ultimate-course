@@ -6,13 +6,8 @@
     </div>
     <div class="bar">
       <div class="left-content" (click)="leftContentClickHandler()">
-        <div *ngIf="showLeftArrow">
-          <i class="fas fa-arrow-left"></i>
-        </div>
-        <div *ngIf="showRightArrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-
+          <i class="fas fa-arrow-left" [hidden]="!showLeftArrow"></i>
+          <i class="fas fa-arrow-right" [hidden]="!showRightArrow"></i>
       </div>
       <div class="right-content">
         <div class="messages box">
