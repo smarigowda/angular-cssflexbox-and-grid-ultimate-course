@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GridBasicComponent } from './grid-basic/grid-basic.component';
 import { GridTemplateAreaComponent } from './grid-template-area/grid-template-area.component';
+import { GridExperimentalLayoutComponent } from './grid-experimental-layout/grid-experimental-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GridBasicComponent,
-    GridTemplateAreaComponent
+    GridTemplateAreaComponent,
+    GridExperimentalLayoutComponent
   ],
   imports: [
     BrowserModule,
