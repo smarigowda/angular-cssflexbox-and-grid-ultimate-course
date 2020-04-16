@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  height: 100vh;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  >* {
+    padding: 1rem;
+    flex: 1;
+  }
+
+  .heading {
+    background-color: #cddc39;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-content {
+    background-color: #b3dfd8;
+  }
+
+  .footer {
+    background-color: #212121;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
