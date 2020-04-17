@@ -1,0 +1,140 @@
+:host {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+.featured-image img {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 3rem;
+}
+
+.main-nav {
+  background-color: black;
+  margin: 3rem 0;
+
+  a {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      background-color: #c9c84a;
+      color: black;
+    }
+  }
+}
+
+
+.main-content {
+  .entry-title {
+    text-align: center;
+  }
+  .entry {
+      p {
+          text-align: justify;
+      }
+  }
+  .extra-info {
+      display: grid;
+      align-items: center;
+      background-color: #c9c84a;
+      color: white;
+      font-size: 1.4rem;
+      p {
+          margin: 0 0 .5rem 0;
+          padding: 1rem;
+          text-align: center;
+      }
+  }
+  .image1,
+  .image2 {
+      text-align: center;
+  }
+  blockquote {
+      font-size: 1.4rem;
+      text-align: center;
+      font-style: italic;
+      color: #525252;
+  }
+
+  @media (min-width:768px) {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "title title title"
+      "extrainfo entry na1"
+      "image1 entry na2"
+      "na3 entry image2";
+  }
+
+  .entry-title {
+    grid-area: title;
+  }
+
+  .entry {
+    grid-area: entry;
+  }
+
+  .extra-info {
+    grid-area: extrainfo;
+  }
+
+  .image1 {
+    grid-area: image1;
+  }
+
+  .image2 {
+    grid-area: image2;
+  }
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.main-nav .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.footer {
+    background-color: #c9c84a;
+    padding-top: 3rem;
+    text-align: center;
+    a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #525252;
+        margin-bottom: .5rem;
+    }
+}
+
+.copyright {
+    color: white;
+    background-color: #282828;
+    margin: 3rem 0 0 0;
+    padding: 1rem;
+    text-align: center;
+}
