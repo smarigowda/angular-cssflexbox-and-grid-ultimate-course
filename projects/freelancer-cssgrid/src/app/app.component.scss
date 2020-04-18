@@ -17,3 +17,29 @@
     text-transform: uppercase;
   }
 }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+
+  h2 {
+    padding-bottom: .5rem;
+
+    &::after {
+      content: '';
+      height: .02rem;
+      width: 7rem;
+      background-color: var(--primary);
+      padding-bottom: .5rem;
+      display: block;
+      margin: 1rem auto 0 auto;
+    }
+  }
+  i {
+      font-size: 3rem;
+      color: var(--secondary);
+  }
+}
