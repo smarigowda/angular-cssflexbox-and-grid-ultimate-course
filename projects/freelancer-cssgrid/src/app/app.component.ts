@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  portfolio;
+  portfolioItems;
   constructor() {
-    this.portfolio = [
+    this.portfolioItems = [
       {
         id: 1,
         projectname: "WebSite",
