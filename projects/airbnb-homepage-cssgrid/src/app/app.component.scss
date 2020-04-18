@@ -202,7 +202,7 @@ main>section {
   width: 100%;
   bottom: -100%;
   background-color: var(--light);
-  transition: bottom .3s east-in-out;
+  transition: bottom .3s ease-in-out;
 
   .container {
     display: grid;

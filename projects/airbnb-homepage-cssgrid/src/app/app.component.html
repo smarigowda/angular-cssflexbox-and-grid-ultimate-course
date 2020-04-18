@@ -10,7 +10,7 @@
       <a href="#">Log in</a>
     </nav>
   </header>
-  
+
   <div class="container search-form-container">
     <div class="search-form">
       <h1>Book unique homes and experiences.</h1>
@@ -202,7 +202,7 @@
   </section>
 </main>
 
-<footer id="footer" class="footer">
+<footer id="footer" [ngClass]="{ 'active': footerActive === true }" class="footer">
   <div class="container">
     <div class="nav-footer">
       <h3>AirCSSGrid</h3>
@@ -247,4 +247,4 @@
   </div>
 </footer>
 
-<a href="#footer" class="footerBtn">Terms, Privacy, Currency & more</a>
+<a href="#footer" class="footerBtn" (click)="footerButtonClicked()">{{footerButtonText}}</a>
