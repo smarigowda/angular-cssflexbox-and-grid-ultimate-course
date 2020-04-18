@@ -191,7 +191,19 @@ main>section {
   text-decoration: none;
 }
 
+.footer.active {
+  bottom: 0;
+}
+
 .footer {
+  position: fixed;
+  border-top: 1px solid #dbdbdb;
+  padding: 3rem 0;
+  width: 100%;
+  bottom: -100%;
+  background-color: var(--light);
+  transition: bottom .3s east-in-out;
+
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -254,8 +266,9 @@ main>section {
       &[href*='instagram.com']::before {
         content: '\f16d';
       }
+
       span {
-          display: none;
+        display: none;
       }
     }
   }
