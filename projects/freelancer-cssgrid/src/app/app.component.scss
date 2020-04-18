@@ -64,3 +64,18 @@
     }
   }
 }
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.footer {
+  background-image: url(../assets/img/contact.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: var(--light);
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
