@@ -2290,6 +2290,149 @@
           }
         }
       }
+    },
+    "cycle2-demo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/cycle2-demo",
+      "sourceRoot": "projects/cycle2-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cycle2-demo",
+            "index": "projects/cycle2-demo/src/index.html",
+            "main": "projects/cycle2-demo/src/main.ts",
+            "polyfills": "projects/cycle2-demo/src/polyfills.ts",
+            "tsConfig": "projects/cycle2-demo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/cycle2-demo/src/favicon.ico",
+              "projects/cycle2-demo/src/assets"
+            ],
+            "styles": [
+              "projects/cycle2-demo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/cycle2-demo/src/environments/environment.ts",
+                  "with": "projects/cycle2-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "cycle2-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "cycle2-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cycle2-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cycle2-demo/src/test.ts",
+            "polyfills": "projects/cycle2-demo/src/polyfills.ts",
+            "tsConfig": "projects/cycle2-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/cycle2-demo/karma.conf.js",
+            "assets": [
+              "projects/cycle2-demo/src/favicon.ico",
+              "projects/cycle2-demo/src/assets"
+            ],
+            "styles": [
+              "projects/cycle2-demo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cycle2-demo/tsconfig.app.json",
+              "projects/cycle2-demo/tsconfig.spec.json",
+              "projects/cycle2-demo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/cycle2-demo/e2e/protractor.conf.js",
+            "devServerTarget": "cycle2-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "cycle2-demo:serve:production"
+            }
+          }
+        }
+      }
     }},
   "cli": {
     "analytics": "ad02cc31-67e9-4a0f-9d92-00553474cd8e"
