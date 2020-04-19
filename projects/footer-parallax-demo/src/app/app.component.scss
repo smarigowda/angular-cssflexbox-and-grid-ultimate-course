@@ -1,0 +1,28 @@
+main {
+  position: relative;
+  background: #f56469;
+  height: 1500px;
+  margin-bottom: 200px;
+  z-index: 2; // this does the trick of parallax effect !
+}
+
+main p {
+  margin: 0;
+  padding-top: 100px;
+  font-size: 100px;
+  text-align: center;
+  color: #ddd;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 200px;
+  background: #4b466f;
+  padding-left: 50px;
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  color: #f56469;
+  bottom: 0;
+}
