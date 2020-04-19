@@ -6,7 +6,7 @@ h2 {
 button {
   font-size: 30px;
   appearance: none;
-  border: none;
+  border: 1px white solid;
   padding: 2rem;
   margin: 1rem;
   border-radius: 5px;
@@ -20,4 +20,8 @@ button {
 .controls {
   display: flex;
   justify-content: center;
+}
+
+button.active-link {
+  border: 1px black solid;
 }

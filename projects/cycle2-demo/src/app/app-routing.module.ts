@@ -5,7 +5,7 @@ import { SlideshowNonImagesComponent } from './slideshow-non-images/slideshow-no
 
 
 const routes: Routes = [
-  { path: '', component: SlideshowImagesComponent },
+  { path: 'images', pathMatch: 'full', component: SlideshowImagesComponent },
   { path: 'non-images', component: SlideshowNonImagesComponent },
 ];
 
