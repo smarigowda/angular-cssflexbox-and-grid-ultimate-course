@@ -2433,6 +2433,149 @@
           }
         }
       }
+    },
+    "checkbox-navigation": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/checkbox-navigation",
+      "sourceRoot": "projects/checkbox-navigation/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/checkbox-navigation",
+            "index": "projects/checkbox-navigation/src/index.html",
+            "main": "projects/checkbox-navigation/src/main.ts",
+            "polyfills": "projects/checkbox-navigation/src/polyfills.ts",
+            "tsConfig": "projects/checkbox-navigation/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/checkbox-navigation/src/favicon.ico",
+              "projects/checkbox-navigation/src/assets"
+            ],
+            "styles": [
+              "projects/checkbox-navigation/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/checkbox-navigation/src/environments/environment.ts",
+                  "with": "projects/checkbox-navigation/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "checkbox-navigation:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "checkbox-navigation:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "checkbox-navigation:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/checkbox-navigation/src/test.ts",
+            "polyfills": "projects/checkbox-navigation/src/polyfills.ts",
+            "tsConfig": "projects/checkbox-navigation/tsconfig.spec.json",
+            "karmaConfig": "projects/checkbox-navigation/karma.conf.js",
+            "assets": [
+              "projects/checkbox-navigation/src/favicon.ico",
+              "projects/checkbox-navigation/src/assets"
+            ],
+            "styles": [
+              "projects/checkbox-navigation/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/checkbox-navigation/tsconfig.app.json",
+              "projects/checkbox-navigation/tsconfig.spec.json",
+              "projects/checkbox-navigation/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/checkbox-navigation/e2e/protractor.conf.js",
+            "devServerTarget": "checkbox-navigation:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "checkbox-navigation:serve:production"
+            }
+          }
+        }
+      }
     }},
   "cli": {
     "analytics": "ad02cc31-67e9-4a0f-9d92-00553474cd8e"
