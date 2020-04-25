@@ -2719,6 +2719,149 @@
           }
         }
       }
+    },
+    "magnific-popup-demo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/magnific-popup-demo",
+      "sourceRoot": "projects/magnific-popup-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/magnific-popup-demo",
+            "index": "projects/magnific-popup-demo/src/index.html",
+            "main": "projects/magnific-popup-demo/src/main.ts",
+            "polyfills": "projects/magnific-popup-demo/src/polyfills.ts",
+            "tsConfig": "projects/magnific-popup-demo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/magnific-popup-demo/src/favicon.ico",
+              "projects/magnific-popup-demo/src/assets"
+            ],
+            "styles": [
+              "projects/magnific-popup-demo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/magnific-popup-demo/src/environments/environment.ts",
+                  "with": "projects/magnific-popup-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "magnific-popup-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "magnific-popup-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "magnific-popup-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/magnific-popup-demo/src/test.ts",
+            "polyfills": "projects/magnific-popup-demo/src/polyfills.ts",
+            "tsConfig": "projects/magnific-popup-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/magnific-popup-demo/karma.conf.js",
+            "assets": [
+              "projects/magnific-popup-demo/src/favicon.ico",
+              "projects/magnific-popup-demo/src/assets"
+            ],
+            "styles": [
+              "projects/magnific-popup-demo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/magnific-popup-demo/tsconfig.app.json",
+              "projects/magnific-popup-demo/tsconfig.spec.json",
+              "projects/magnific-popup-demo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/magnific-popup-demo/e2e/protractor.conf.js",
+            "devServerTarget": "magnific-popup-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "magnific-popup-demo:serve:production"
+            }
+          }
+        }
+      }
     }},
   "cli": {
     "analytics": "ad02cc31-67e9-4a0f-9d92-00553474cd8e"
